@@ -32,19 +32,18 @@ const App = () => {
     <>
       <Header />
       <Suspense fallback={null}>
-    <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='Home' element={<Home />} />
-        <Route path='/movies' element={<Movies />} />
-        <Route path='movies/:movieId' element={<MovieDetails />}>
-          <Route path='cats' element={<Cats />} />
-          <Route path='reviews' element={<Reviews />} />
-        </Route>
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='Home' element={<Home />} />
+          <Route path='/movies' element={<Movies />} />
+          <Route path='movies/:movieId' element={<MovieDetails />}>
+            <Route path='cats' element={<Cats />} />
+            <Route path='reviews' element={<Reviews />} />
+          </Route>
+          <Route path='*' element={<NotFound />} />
+        </Routes>
 
       </Suspense>
-  
     </>
   );
     

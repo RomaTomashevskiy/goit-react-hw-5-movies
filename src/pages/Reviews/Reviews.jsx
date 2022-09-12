@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
+import { getMoviesReviews } from '../../api/apiServer';
 
 const Reviews = () => {
     const { movieId } = useParams();
@@ -8,8 +9,7 @@ const Reviews = () => {
 
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=5f571a4f42cbc72c71a468bda3f0da23&language=en-US&page=1`)
-            .then(res => res.json())
+        getMoviesReviews(movieId)
             .then(data => {
                 if (data.total_pages === 0) {
                     return setError(true)

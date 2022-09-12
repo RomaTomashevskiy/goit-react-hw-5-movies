@@ -42,7 +42,7 @@ const MovieDetailsMarkur = ({ movie }) => {
                 </BoxOverview>
             </Box>
             <h2>Additional information</h2>
-            <Information to={`cats`}  state={location.state}>Cats</Information>
+            <Information to={`cats`}  state={location.state}>Cast</Information>
             <Information to={`reviews`}  state={location.state}>Reviews</Information>
             <Outlet />
         </>

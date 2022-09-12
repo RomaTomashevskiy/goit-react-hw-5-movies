@@ -9,8 +9,7 @@ const Cats = () => {
 
     useEffect(() => {
         getMoviesCats(movieId)
-     
-            .then(data => setMovieInfo(data))
+        .then(data => setMovieInfo(data))
     }, [movieId]);
 
     return (
