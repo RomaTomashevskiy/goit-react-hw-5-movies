@@ -1,7 +1,8 @@
 import { useState } from "react";
-import {Form , Input , Button} from './SearchBar.styled'
+import { Form, Input, Button } from './SearchBar.styled'
+import PropTypes from 'prop-types';
 
-const SearchBar = ({onSubmit }) => {
+const SearchBar = ({onSubmit}) => {
     const [searchFilm, setSearchFilm] = useState('');   
 
     const handleChangeInput = e => {
@@ -25,5 +26,10 @@ const SearchBar = ({onSubmit }) => {
         </Form>
     );
 };
+
+SearchBar.prototype = {
+    onSubmit: PropTypes.func.isRequired,
+};
+
 
 export default SearchBar;

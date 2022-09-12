@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getMoviesCats } from '../../api/apiServer';
 
 
+
 const Cats = () => {
     const { movieId } = useParams();
     const [movieInfo, setMovieInfo] = useState(null);

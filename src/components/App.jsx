@@ -1,30 +1,19 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy  , Suspense} from 'react';
 import Header from "./AppBar";
-// import Home from 'pages/Home/Home';
-// import Movies from 'pages/Movies/Movies';
-// import MovieDetails from '../pages/MovieDetails/MovieDetails';
+
 import Cats from 'pages/Cats/Cats';
 import Reviews from 'pages/Reviews/Reviews';
 // import NotFound from '../pages/NotFound/NotFound'
 
 
-const Home = lazy(() =>
-  import('../pages/Home/Home' /* webpackChunkName: "HomePage" */),
-);
+const Home = lazy(() =>import('../pages/Home/Home' ));
 
-const Movies = lazy(() =>
-  import('../pages/Movies/Movies' /* webpackChunkName: "MoviesPage" */),
-);
+const Movies = lazy(() => import('../pages/Movies/Movies' ));
 
-const MovieDetails = lazy(() =>
-  import(
-    '../pages/MovieDetails/MovieDetails' /* webpackChunkName: "Movie-details-page"*/
-  ),
-);
-const NotFound = lazy(() =>
-  import('../pages/NotFound/NotFound' /* webpackChunkName: "Not-found-view"*/),
-);
+const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
+
+const NotFound = lazy(() =>import('../pages/NotFound/NotFound'));
 
 
 const App = () => {

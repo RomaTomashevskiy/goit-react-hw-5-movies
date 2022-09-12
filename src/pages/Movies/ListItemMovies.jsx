@@ -1,5 +1,6 @@
 import { Item, Link } from './Movies.styled';
 import { useLocation } from 'react-router-dom';
+import PropTypes, { shape } from 'prop-types';
 const ListItemMovies = ({ movies }) => {
 
     const location = useLocation();
@@ -14,5 +15,11 @@ const ListItemMovies = ({ movies }) => {
     );
 };
 
+ListItemMovies.prototype = {
+    movies: PropTypes.array(shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+    }))
+};
 
 export default ListItemMovies;
